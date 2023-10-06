@@ -7,18 +7,40 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		40C7C8D92AD0155700906B5D /* MedleyChordsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40C7C8D82AD0155700906B5D /* MedleyChordsApp.swift */; };
-		40C7C8DB2AD0155700906B5D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40C7C8DA2AD0155700906B5D /* ContentView.swift */; };
+		40C7C8D92AD0155700906B5D /* DatePlannerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40C7C8D82AD0155700906B5D /* DatePlannerApp.swift */; };
 		40C7C8DD2AD0155800906B5D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 40C7C8DC2AD0155800906B5D /* Assets.xcassets */; };
 		40C7C8E02AD0155800906B5D /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 40C7C8DF2AD0155800906B5D /* Preview Assets.xcassets */; };
+		40C7C8E72AD01A4100906B5D /* ColorOption.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40C7C8E62AD01A4100906B5D /* ColorOption.swift */; };
+		40C7C8E92AD01A9600906B5D /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40C7C8E82AD01A9600906B5D /* Event.swift */; };
+		40C7C8EB2AD01ACA00906B5D /* EventData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40C7C8EA2AD01ACA00906B5D /* EventData.swift */; };
+		40C7C8ED2AD01AED00906B5D /* EventDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40C7C8EC2AD01AED00906B5D /* EventDetail.swift */; };
+		40C7C8EF2AD01B0400906B5D /* EventEditor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40C7C8EE2AD01B0400906B5D /* EventEditor.swift */; };
+		40C7C8F12AD01B6700906B5D /* EventList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40C7C8F02AD01B6700906B5D /* EventList.swift */; };
+		40C7C8F32AD01B9100906B5D /* EventRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40C7C8F22AD01B9100906B5D /* EventRow.swift */; };
+		40C7C8F52AD01BAC00906B5D /* EventSymbols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40C7C8F42AD01BAC00906B5D /* EventSymbols.swift */; };
+		40C7C8F72AD01BE300906B5D /* EventTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40C7C8F62AD01BE300906B5D /* EventTask.swift */; };
+		40C7C8F92AD01C0100906B5D /* SFSymbolStyling.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40C7C8F82AD01C0100906B5D /* SFSymbolStyling.swift */; };
+		40C7C8FB2AD01C1800906B5D /* SymbolPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40C7C8FA2AD01C1800906B5D /* SymbolPicker.swift */; };
+		40C7C8FD2AD01C3600906B5D /* TaskRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40C7C8FC2AD01C3600906B5D /* TaskRow.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		40C7C8D52AD0155700906B5D /* MedleyChords.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MedleyChords.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		40C7C8D82AD0155700906B5D /* MedleyChordsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedleyChordsApp.swift; sourceTree = "<group>"; };
-		40C7C8DA2AD0155700906B5D /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		40C7C8D82AD0155700906B5D /* DatePlannerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatePlannerApp.swift; sourceTree = "<group>"; };
 		40C7C8DC2AD0155800906B5D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		40C7C8DF2AD0155800906B5D /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		40C7C8E62AD01A4100906B5D /* ColorOption.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorOption.swift; sourceTree = "<group>"; };
+		40C7C8E82AD01A9600906B5D /* Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
+		40C7C8EA2AD01ACA00906B5D /* EventData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventData.swift; sourceTree = "<group>"; };
+		40C7C8EC2AD01AED00906B5D /* EventDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventDetail.swift; sourceTree = "<group>"; };
+		40C7C8EE2AD01B0400906B5D /* EventEditor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventEditor.swift; sourceTree = "<group>"; };
+		40C7C8F02AD01B6700906B5D /* EventList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventList.swift; sourceTree = "<group>"; };
+		40C7C8F22AD01B9100906B5D /* EventRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventRow.swift; sourceTree = "<group>"; };
+		40C7C8F42AD01BAC00906B5D /* EventSymbols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventSymbols.swift; sourceTree = "<group>"; };
+		40C7C8F62AD01BE300906B5D /* EventTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventTask.swift; sourceTree = "<group>"; };
+		40C7C8F82AD01C0100906B5D /* SFSymbolStyling.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SFSymbolStyling.swift; sourceTree = "<group>"; };
+		40C7C8FA2AD01C1800906B5D /* SymbolPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SymbolPicker.swift; sourceTree = "<group>"; };
+		40C7C8FC2AD01C3600906B5D /* TaskRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskRow.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,8 +73,19 @@
 		40C7C8D72AD0155700906B5D /* MedleyChords */ = {
 			isa = PBXGroup;
 			children = (
-				40C7C8D82AD0155700906B5D /* MedleyChordsApp.swift */,
-				40C7C8DA2AD0155700906B5D /* ContentView.swift */,
+				40C7C8E62AD01A4100906B5D /* ColorOption.swift */,
+				40C7C8D82AD0155700906B5D /* DatePlannerApp.swift */,
+				40C7C8E82AD01A9600906B5D /* Event.swift */,
+				40C7C8EA2AD01ACA00906B5D /* EventData.swift */,
+				40C7C8EC2AD01AED00906B5D /* EventDetail.swift */,
+				40C7C8EE2AD01B0400906B5D /* EventEditor.swift */,
+				40C7C8F02AD01B6700906B5D /* EventList.swift */,
+				40C7C8F22AD01B9100906B5D /* EventRow.swift */,
+				40C7C8F42AD01BAC00906B5D /* EventSymbols.swift */,
+				40C7C8F62AD01BE300906B5D /* EventTask.swift */,
+				40C7C8F82AD01C0100906B5D /* SFSymbolStyling.swift */,
+				40C7C8FA2AD01C1800906B5D /* SymbolPicker.swift */,
+				40C7C8FC2AD01C3600906B5D /* TaskRow.swift */,
 				40C7C8DC2AD0155800906B5D /* Assets.xcassets */,
 				40C7C8DE2AD0155800906B5D /* Preview Content */,
 			);
@@ -137,8 +170,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				40C7C8DB2AD0155700906B5D /* ContentView.swift in Sources */,
-				40C7C8D92AD0155700906B5D /* MedleyChordsApp.swift in Sources */,
+				40C7C8F12AD01B6700906B5D /* EventList.swift in Sources */,
+				40C7C8E92AD01A9600906B5D /* Event.swift in Sources */,
+				40C7C8EF2AD01B0400906B5D /* EventEditor.swift in Sources */,
+				40C7C8F32AD01B9100906B5D /* EventRow.swift in Sources */,
+				40C7C8EB2AD01ACA00906B5D /* EventData.swift in Sources */,
+				40C7C8FD2AD01C3600906B5D /* TaskRow.swift in Sources */,
+				40C7C8F52AD01BAC00906B5D /* EventSymbols.swift in Sources */,
+				40C7C8D92AD0155700906B5D /* DatePlannerApp.swift in Sources */,
+				40C7C8F72AD01BE300906B5D /* EventTask.swift in Sources */,
+				40C7C8E72AD01A4100906B5D /* ColorOption.swift in Sources */,
+				40C7C8FB2AD01C1800906B5D /* SymbolPicker.swift in Sources */,
+				40C7C8ED2AD01AED00906B5D /* EventDetail.swift in Sources */,
+				40C7C8F92AD01C0100906B5D /* SFSymbolStyling.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
