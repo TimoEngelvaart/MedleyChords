@@ -5,9 +5,9 @@ struct EventRow: View {
     
     var body: some View {
         HStack {
-            Image(systemName: event.symbol)
-                .sfSymbolStyling()
-                .foregroundStyle(event.color)
+//            Image(systemName: event.symbol)
+//                .sfSymbolStyling()
+//                .foregroundStyle(event.color)
             
             VStack(alignment: .leading, spacing: 5) {
                 Text(event.title)

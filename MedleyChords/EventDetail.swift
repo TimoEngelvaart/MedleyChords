@@ -13,10 +13,10 @@ struct EventDetail: View {
                 Button {
                     isPickingSymbol.toggle()
                 } label: {
-                    Image(systemName: event.symbol)
-                        .sfSymbolStyling()
-                        .foregroundColor(event.color)
-                        .opacity(isEditing ? 0.3 : 1)
+//                    Image(systemName: event.symbol)
+//                        .sfSymbolStyling()
+//                        .foregroundColor(event.color)
+//                        .opacity(isEditing ? 0.3 : 1)
                 }
                 .buttonStyle(.plain)
                 .padding(.horizontal, 5)
@@ -68,7 +68,7 @@ struct EventDetail: View {
         .navigationBarTitleDisplayMode(.inline)
         #endif
         .sheet(isPresented: $isPickingSymbol) {
-            SymbolPicker(event: $event)
+//            SymbolPicker(event: $event)
         }
     }
 }
