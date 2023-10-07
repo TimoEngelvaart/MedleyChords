@@ -22,6 +22,9 @@
 		40C7C8F92AD01C0100906B5D /* SFSymbolStyling.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40C7C8F82AD01C0100906B5D /* SFSymbolStyling.swift */; };
 		40C7C8FB2AD01C1800906B5D /* SymbolPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40C7C8FA2AD01C1800906B5D /* SymbolPicker.swift */; };
 		40C7C8FD2AD01C3600906B5D /* TaskRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40C7C8FC2AD01C3600906B5D /* TaskRow.swift */; };
+		40C7C8FF2AD1A13E00906B5D /* MedleyModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40C7C8FE2AD1A13E00906B5D /* MedleyModel.swift */; };
+		40C7C9012AD1A1E100906B5D /* MedleysListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40C7C9002AD1A1E100906B5D /* MedleysListView.swift */; };
+		40C7C9032AD1A24F00906B5D /* AddMedleyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40C7C9022AD1A24F00906B5D /* AddMedleyView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,6 +44,9 @@
 		40C7C8F82AD01C0100906B5D /* SFSymbolStyling.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SFSymbolStyling.swift; sourceTree = "<group>"; };
 		40C7C8FA2AD01C1800906B5D /* SymbolPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SymbolPicker.swift; sourceTree = "<group>"; };
 		40C7C8FC2AD01C3600906B5D /* TaskRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskRow.swift; sourceTree = "<group>"; };
+		40C7C8FE2AD1A13E00906B5D /* MedleyModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedleyModel.swift; sourceTree = "<group>"; };
+		40C7C9002AD1A1E100906B5D /* MedleysListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedleysListView.swift; sourceTree = "<group>"; };
+		40C7C9022AD1A24F00906B5D /* AddMedleyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddMedleyView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,6 +94,9 @@
 				40C7C8FC2AD01C3600906B5D /* TaskRow.swift */,
 				40C7C8DC2AD0155800906B5D /* Assets.xcassets */,
 				40C7C8DE2AD0155800906B5D /* Preview Content */,
+				40C7C8FE2AD1A13E00906B5D /* MedleyModel.swift */,
+				40C7C9002AD1A1E100906B5D /* MedleysListView.swift */,
+				40C7C9022AD1A24F00906B5D /* AddMedleyView.swift */,
 			);
 			path = MedleyChords;
 			sourceTree = "<group>";
@@ -171,6 +180,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				40C7C8F12AD01B6700906B5D /* EventList.swift in Sources */,
+				40C7C9012AD1A1E100906B5D /* MedleysListView.swift in Sources */,
+				40C7C9032AD1A24F00906B5D /* AddMedleyView.swift in Sources */,
 				40C7C8E92AD01A9600906B5D /* Event.swift in Sources */,
 				40C7C8EF2AD01B0400906B5D /* EventEditor.swift in Sources */,
 				40C7C8F32AD01B9100906B5D /* EventRow.swift in Sources */,
@@ -179,6 +190,7 @@
 				40C7C8F52AD01BAC00906B5D /* EventSymbols.swift in Sources */,
 				40C7C8D92AD0155700906B5D /* DatePlannerApp.swift in Sources */,
 				40C7C8F72AD01BE300906B5D /* EventTask.swift in Sources */,
+				40C7C8FF2AD1A13E00906B5D /* MedleyModel.swift in Sources */,
 				40C7C8E72AD01A4100906B5D /* ColorOption.swift in Sources */,
 				40C7C8FB2AD01C1800906B5D /* SymbolPicker.swift in Sources */,
 				40C7C8ED2AD01AED00906B5D /* EventDetail.swift in Sources */,

@@ -79,5 +79,6 @@ struct EventEditor: View {
 struct EventEditor_Previews: PreviewProvider {
     static var previews: some View {
         EventEditor(event: .constant(Event()))
+            .environmentObject(EventData()) // Add this line to provide EventData
     }
 }

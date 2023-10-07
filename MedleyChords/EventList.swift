@@ -34,7 +34,7 @@ struct EventList: View {
                 }
             }
         }
-        .navigationTitle("Date Planner")
+        .navigationTitle("Medley Chords")
         .toolbar {
             ToolbarItem {
                 Button {
