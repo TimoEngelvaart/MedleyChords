@@ -1,25 +1,25 @@
 import SwiftUI
 
-struct EventEditor: View {
-    @Binding var event: Event
+struct MedleyEditor: View {
+    @Binding var medley: Medley
     var isNew = false
     
     @State private var isDeleted = false
-    @EnvironmentObject var eventData: EventData
+    @EnvironmentObject var medleyData: MedleyData
     @Environment(\.dismiss) private var dismiss
     
     // Keep a local copy in case we make edits, so we don't disrupt the list of events.
     // This is important for when the date changes and puts the event in a different section.
-    @State private var eventCopy = Event()
+    @State private var medleyCopy = Medley(title: "", songs: [Song(chords: "String", key: "String")])
     @State private var isEditing = false
     
-    private var isEventDeleted: Bool {
-        !eventData.exists(event) && !isNew
+    private var isMedleyDeleted: Bool {
+        !medleyData.exists(medley) && !isNew
     }
     
     var body: some View {
         VStack {
-            EventDetail(event: $eventCopy, isEditing: isNew ? true : isEditing)
+            MedleyDetail(medley: $medleyCopy, isEditing: isNew ? true : isEditing)
                 .toolbar {
                     ToolbarItem(placement: .cancellationAction) {
                         if isNew {
@@ -31,13 +31,13 @@ struct EventEditor: View {
                     ToolbarItem {
                         Button {
                             if isNew {
-                                eventData.events.append(eventCopy)
+                                medleyData.medleys.append(medleyCopy)
                                 dismiss()
                             } else {
                                 if isEditing && !isDeleted {
-                                    print("Done, saving any changes to \(event.title).")
+                                    print("Done, saving any changes to \(medley.title).")
                                     withAnimation {
-                                        event = eventCopy // Put edits (if any) back in the store.
+                                        medley = medleyCopy // Put edits (if any) back in the store.
                                     }
                                 }
                                 isEditing.toggle()
@@ -48,16 +48,16 @@ struct EventEditor: View {
                     }
                 }
                 .onAppear {
-                    eventCopy = event // Grab a copy in case we decide to make edits.
+                    medleyCopy = medley // Grab a copy in case we decide to make edits.
                 }
-                .disabled(isEventDeleted)
+                .disabled(isMedleyDeleted)
 
             if isEditing && !isNew {
 
                 Button(role: .destructive, action: {
                     isDeleted = true
                     dismiss()
-                    eventData.delete(event)
+                    medleyData.delete(medley)
                 }, label: {
                     Label("Delete Event", systemImage: "trash.circle.fill")
                         .font(.title2)
@@ -67,7 +67,7 @@ struct EventEditor: View {
             }
         }
         .overlay(alignment: .center) {
-            if isEventDeleted {
+            if isMedleyDeleted {
                 Color(UIColor.systemBackground)
                 Text("Event Deleted. Select an Event.")
                     .foregroundStyle(.secondary)
@@ -76,9 +76,9 @@ struct EventEditor: View {
     }
 }
 
-struct EventEditor_Previews: PreviewProvider {
+struct MedleyEditor_Previews: PreviewProvider {
     static var previews: some View {
-        EventEditor(event: .constant(Event()))
-            .environmentObject(EventData()) // Add this line to provide EventData
+        MedleyEditor(medley: .constant(Medley(title: "String", songs: [Song(chords: "", key: "String")])))
+            .environmentObject(MedleyData()) // Add this line to provide EventData
     }
 }

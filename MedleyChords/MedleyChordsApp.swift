@@ -8,18 +8,17 @@
 import SwiftUI
 
 @main
-struct DatePlannerApp: App {
-    @StateObject private var eventData = EventData()
+struct MedleyChordsApp: App {
+    @StateObject private var medleyData = MedleyData()
 
     var body: some Scene {
         WindowGroup {
             NavigationView {
-                EventList()
-                Text("Select an Event")
+                MedleyList()
+                Text("Select a medley")
                     .foregroundStyle(.secondary)
             }
-            .environmentObject(eventData)
-
+            .environmentObject(medleyData)
         }
     }
 }

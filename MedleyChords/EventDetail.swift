@@ -1,65 +1,66 @@
 import SwiftUI
 
-struct EventDetail: View {
-    @Binding var event: Event
+struct MedleyDetail: View {
+    @Binding var medley: Medley
     let isEditing: Bool
     
     @State private var isPickingSymbol = false
     
     var body: some View {
         List {
-
             HStack {
                 Button {
                     isPickingSymbol.toggle()
                 } label: {
-//                    Image(systemName: event.symbol)
-//                        .sfSymbolStyling()
-//                        .foregroundColor(event.color)
-//                        .opacity(isEditing ? 0.3 : 1)
+                    Text("Click Me!")
+                            .font(.headline)
+                            .foregroundColor(.white)
+                            .padding(.vertical, 10)
+                            .padding(.horizontal, 20)
+                            .background(Color.blue)
+                            .cornerRadius(10)
+          
                 }
                 .buttonStyle(.plain)
                 .padding(.horizontal, 5)
 
                 if isEditing {
-                    TextField("New Event", text: $event.title)
+                    TextField("New Event", text: $medley.title)
                         .font(.title2)
                 } else {
-                    Text(event.title)
+                    Text(medley.title)
                         .font(.title2)
                         .fontWeight(.semibold)
                 }
             }
             
             if isEditing {
-                DatePicker("Date", selection: $event.date)
-                    .labelsHidden()
-                    .listRowSeparator(.hidden)
+               
 
             } else {
                 HStack {
-                    Text(event.date, style: .date)
-                    Text(event.date, style: .time)
+                  
+                 
                 }
                 .listRowSeparator(.hidden)
             }
             
-            Text("Tasks")
+            Text("Songs")
                 .fontWeight(.bold)
             
-            ForEach($event.tasks) { $item in
-                TaskRow(task: $item, isEditing: isEditing)
-            }
-            .onDelete(perform: { indexSet in
-                event.tasks.remove(atOffsets: indexSet)
-            })
+//            ForEach($event.tasks) { $item in
+//                TaskRow(task: $item, isEditing: isEditing)
+//            }
+//            .onDelete(perform: { indexSet in
+//                event.tasks.remove(atOffsets: indexSet)
+//            })
             
             Button {
-                event.tasks.append(EventTask(text: "", isNew: true))
+                medley.songs.append(Song(chords: "", key: ""))
             } label: {
                 HStack {
                     Image(systemName: "plus")
-                    Text("Add Task")
+                    Text("Add Song")
                 }
             }
             .buttonStyle(.borderless)
@@ -75,6 +76,6 @@ struct EventDetail: View {
 
 struct EventDetail_Previews: PreviewProvider {
     static var previews: some View {
-        EventDetail(event: .constant(Event.example), isEditing: true)
+        MedleyDetail(medley: .constant(Medley.example), isEditing: true)
     }
 }
