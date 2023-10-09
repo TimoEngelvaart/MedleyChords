@@ -4,32 +4,32 @@ class MedleyData: ObservableObject {
     @Published var medleys: [Medley] = [
         Medley(title: "Avicii",
              songs: [
-                 Song(name: "", chords: "F - G - A", key: "F"),
-                 Song(name: "", chords: "C# - G# - A#", key: "C#")
+                 Song(title: "Wake me Up", chords: "F - G - A", key: "F"),
+                 Song(title: "Levels", chords: "C# - G# - A#", key: "C#")
              ]
         ),
         Medley(title: "The Sorry Medley",
              songs: [
-                 Song(name: "", chords: "F - G - A", key: "F"),
-                 Song(name: "", chords: "C# - G# - A#", key: "C#")
+                 Song(title: "", chords: "F - G - A", key: "F"),
+                 Song(title: "", chords: "C# - G# - A#", key: "C#")
              ]
         ),
         Medley(title: "Demi Lovato",
              songs: [
-                 Song(name: "", chords: "F - G - A", key: "F"),
-                 Song(name: "", chords: "C# - G# - A#", key: "C#")
+                 Song(title: "", chords: "F - G - A", key: "F"),
+                 Song(title: "", chords: "C# - G# - A#", key: "C#")
              ]
         ),
         Medley(title: "Coldplay",
              songs: [
-                 Song(name: "", chords: "F - G - A", key: "F"),
-                 Song(name: "", chords: "C# - G# - A#", key: "C#")
+                 Song(title: "", chords: "F - G - A", key: "F"),
+                 Song(title: "", chords: "C# - G# - A#", key: "C#")
              ]
         ),
         Medley(title: "Just another medley",
              songs: [
-                 Song(name: "", chords: "F - G - A", key: "F"),
-                 Song(name: "", chords: "C# - G# - A#", key: "C#")
+                 Song(title: "", chords: "F - G - A", key: "F"),
+                 Song(title: "", chords: "C# - G# - A#", key: "C#")
              ]
         ),
     ]

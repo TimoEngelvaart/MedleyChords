@@ -10,7 +10,7 @@ struct MedleyEditor: View {
     
     // Keep a local copy in case we make edits, so we don't disrupt the list of events.
     // This is important for when the date changes and puts the event in a different section.
-    @State private var medleyCopy = Medley(title: "", songs: [Song(name: "", chords: "String", key: "String")])
+    @State private var medleyCopy = Medley(title: "", songs: [Song(title: "", chords: "String", key: "String")])
     @State private var isEditing = false
     
     private var isMedleyDeleted: Bool {
@@ -78,7 +78,7 @@ struct MedleyEditor: View {
 
 struct MedleyEditor_Previews: PreviewProvider {
     static var previews: some View {
-        MedleyEditor(medley: .constant(Medley(title: "String", songs: [Song(name: "", chords: "", key: "String")])))
+        MedleyEditor(medley: .constant(Medley(title: "String", songs: [Song(title: "", chords: "", key: "String")])))
             .environmentObject(MedleyData()) // Add this line to provide EventData
     }
 }

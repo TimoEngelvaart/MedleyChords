@@ -6,6 +6,7 @@ struct AddSongView: View {
     
     var body: some View {
         Form {
+            TextField("Song", text: $song.title)
             TextField("Chords", text: $song.chords)
             TextField("Key", text: $song.key)
         }
