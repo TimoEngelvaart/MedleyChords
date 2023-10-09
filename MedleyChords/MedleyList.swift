@@ -3,7 +3,7 @@ import SwiftUI
 struct MedleyList: View {
     @EnvironmentObject var medleyData: MedleyData
     @State private var isAddingNewEvent = false
-    @State private var newMedley = Medley(title: "", songs: [Song(chords: "", key: "")])
+    @State private var newMedley = Medley(title: "", songs: [Song(name: "", chords: "", key: "")])
 
     
     var body: some View {
@@ -34,7 +34,7 @@ struct MedleyList: View {
         .toolbar {
             ToolbarItem {
                 Button {
-                    newMedley = Medley(title: "test", songs: [Song(chords: "F - G - A", key: "F")])
+                    newMedley = Medley(title: "test", songs: [Song(name: "", chords: "F - G - A", key: "F")])
                     isAddingNewEvent = true
                 } label: {
                     Image(systemName: "plus")
