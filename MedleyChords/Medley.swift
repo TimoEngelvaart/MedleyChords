@@ -13,8 +13,8 @@ struct Medley: Identifiable, Hashable {
     static var example = Medley(
         title: "Avicii",
         songs: [
-            Song(title: "", chords: "F - G - A", key: "D"),
-            Song(title: "", chords: "C# - G# - A#", key: "C#")
+            Song(title: "Wake me Up", chords: "F - G - A", key: "A"),
+            Song(title: "Levels", chords: "C# - G# - A#", key: "C#")
         ]
     )
 }

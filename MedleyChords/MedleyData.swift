@@ -4,7 +4,7 @@ class MedleyData: ObservableObject {
     @Published var medleys: [Medley] = [
         Medley(title: "Avicii",
              songs: [
-                 Song(title: "Wake me Up", chords: "F - G - A", key: "F"),
+                 Song(title: "Wake me Up", chords: "F - G - B", key: "F"),
                  Song(title: "Levels", chords: "C# - G# - A#", key: "C#")
              ]
         ),

@@ -52,7 +52,7 @@ struct MedleyDetail: View {
                         TextField("New Event", text: $medley.title)
                             .font(.title2)
                     } else {
-                        Text(medley.title)
+                        Text("Songs")
                             .font(.title2)
                             .fontWeight(.semibold)
                     }
@@ -61,9 +61,7 @@ struct MedleyDetail: View {
                 Text("Songs")
                     .fontWeight(.bold)
                 
-                Button(action: transposeChords) {
-                                   Text("Transpose All Songs to Key of \(transposeKey)")
-                               }
+               
                 
                 ForEach(medley.songs.indices, id: \.self) { index in
                                    VStack(alignment: .leading) {
@@ -75,7 +73,7 @@ struct MedleyDetail: View {
                                            Text("Transposed to Key of \(transposeKey)")
                                        }
                                    }
-                                   .padding()
+                                 
                                }
                 
                 Button {
@@ -87,9 +85,11 @@ struct MedleyDetail: View {
                     }
                 }
                 .buttonStyle(.borderless)
-                
+                Button(action: transposeChords) {
+                                   Text("Transpose All Songs to Key of \(transposeKey)")
+                               }
             }
-            .navigationTitle("Medleys")
+            .navigationTitle(medley.title)
             .toolbar {
                 ToolbarItem(placement: .navigationBarLeading) {
                     Button(action: {
@@ -111,3 +111,5 @@ struct MedleyDetail_Previews: PreviewProvider {
         MedleyDetail(medley: .constant(Medley.example), isEditing: true)
     }
 }
+
+
