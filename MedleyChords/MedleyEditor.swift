@@ -19,7 +19,7 @@ struct MedleyEditor: View {
     
     var body: some View {
         VStack {
-            MedleyDetail(medley: $medleyCopy, isEditing: isNew ? true : isEditing)
+            MedleyDetail(medley: medleyCopy, isEditing: isNew ? true : isEditing)
                 .toolbar {
                     ToolbarItem(placement: .cancellationAction) {
                         if isNew {

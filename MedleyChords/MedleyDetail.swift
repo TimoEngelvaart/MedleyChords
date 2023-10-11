@@ -1,7 +1,7 @@
 import SwiftUI
 
 struct MedleyDetail: View {
-    @Binding var medley: Medley
+    @ObservedObject var medley: Medley
     let isEditing: Bool
     @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
     @State private var path: [Int] = []  // Nothing on the stack by default.
@@ -9,30 +9,36 @@ struct MedleyDetail: View {
     @State private var isTransposed: Bool = false  // Flag to indicate whether chords have been transposed
     
     func transpose(chords: String, toKey targetKey: String) -> String {
-        // Define a mapping of chords to positions in the chromatic scale
         let chordMap: [String: Int] = [
             "C": 0, "C#": 1, "D": 2, "D#": 3, "E": 4,
             "F": 5, "F#": 6, "G": 7, "G#": 8, "A": 9,
             "A#": 10, "B": 11
         ]
 
-        // Split the chords string into an array of individual chords
-        let chordsArray = chords.split(separator: " ")
+        guard let targetKeyPosition = chordMap[targetKey], let originalKeyPosition = chordMap[String(chords.prefix(1))] else { return chords }  // Return original chords if target key is invalid
 
-        // Determine the transposition interval based on the target key
-        guard let targetKeyPosition = chordMap[targetKey] else { return chords }  // Return original chords if target key is invalid
+        let chordsArray = chords.split(separator: "-").map { $0.trimmingCharacters(in: .whitespaces) }  // Split and trim chords
 
-        // Transpose each chord and join them back into a string
         let transposedChords = chordsArray.compactMap { chord -> String? in
-            guard let chordPosition = chordMap[String(chord)] else { return nil }  // Return nil if chord is invalid
-            let transposedPosition = (chordPosition + targetKeyPosition) % 12  // Transpose the chord
-            return chordMap.first(where: { $0.value == transposedPosition })?.key  // Get the transposed chord or return nil if there's an error
-        }.joined(separator: " ")
-
+            let chordRoot: String
+            if chord.count > 1 && chordMap.keys.contains(String(chord.prefix(2))) {
+                chordRoot = String(chord.prefix(2))
+            } else {
+                chordRoot = String(chord.prefix(1))
+            }
+            let chordSuffix = chord.dropFirst(chordRoot.count)  // Everything after the root
+            
+            guard let chordPosition = chordMap[chordRoot] else { return nil }  // Return nil if chord is invalid
+            
+            let transposedPosition = (chordPosition + (targetKeyPosition - originalKeyPosition + 12) % 12) % 12  // Transpose the chord
+            let transposedChordRoot = chordMap.first(where: { $0.value == transposedPosition })?.key ?? chordRoot  // Use original root if transposition fails
+            
+            return transposedChordRoot + chordSuffix  // Concatenate transposed root with original suffix
+        }.joined(separator: " - ")
+ 
+    
         return transposedChords
     }
-
-
     
     // Function to transpose chords
     func transposeChords() {
@@ -107,9 +113,11 @@ struct MedleyDetail: View {
 }
 
 struct MedleyDetail_Previews: PreviewProvider {
+    static var medleyData = MedleyData()  // Create an instance of MedleyData
+
     static var previews: some View {
-        MedleyDetail(medley: .constant(Medley.example), isEditing: true)
+        // Assume we're using the first medley in the medleys array for preview
+        MedleyDetail(medley: medleyData.medleys[0], isEditing: true)
+            .environmentObject(medleyData)  // Pass medleyData as an environment object
     }
 }
-
-
