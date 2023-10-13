@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		401CA9852AD9B2C60010155C /* ChordUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 401CA9842AD9B2C60010155C /* ChordUtils.swift */; };
 		40C7C8D92AD0155700906B5D /* MedleyChordsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40C7C8D82AD0155700906B5D /* MedleyChordsApp.swift */; };
 		40C7C8DD2AD0155800906B5D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 40C7C8DC2AD0155800906B5D /* Assets.xcassets */; };
 		40C7C8E02AD0155800906B5D /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 40C7C8DF2AD0155800906B5D /* Preview Assets.xcassets */; };
@@ -20,6 +21,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		401CA9842AD9B2C60010155C /* ChordUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChordUtils.swift; sourceTree = "<group>"; };
 		40C7C8D52AD0155700906B5D /* MedleyChords.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MedleyChords.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		40C7C8D82AD0155700906B5D /* MedleyChordsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedleyChordsApp.swift; sourceTree = "<group>"; };
 		40C7C8DC2AD0155800906B5D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -63,6 +65,7 @@
 		40C7C8D72AD0155700906B5D /* MedleyChords */ = {
 			isa = PBXGroup;
 			children = (
+				401CA9842AD9B2C60010155C /* ChordUtils.swift */,
 				40C7C8D82AD0155700906B5D /* MedleyChordsApp.swift */,
 				40C7C8E82AD01A9600906B5D /* Medley.swift */,
 				40C7C8EA2AD01ACA00906B5D /* MedleyData.swift */,
@@ -158,6 +161,7 @@
 				40CB5D292AD48224005A71E4 /* addSongView.swift in Sources */,
 				40C7C8F12AD01B6700906B5D /* MedleyList.swift in Sources */,
 				40C7C8E92AD01A9600906B5D /* Medley.swift in Sources */,
+				401CA9852AD9B2C60010155C /* ChordUtils.swift in Sources */,
 				40C7C8EF2AD01B0400906B5D /* MedleyEditor.swift in Sources */,
 				40C7C8F32AD01B9100906B5D /* MedleyRow.swift in Sources */,
 				40C7C8EB2AD01ACA00906B5D /* MedleyData.swift in Sources */,

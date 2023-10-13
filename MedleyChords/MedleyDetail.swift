@@ -9,38 +9,6 @@ enum MusicalKey: String, CaseIterable {
     }
 }
 
-// Struct for chord transposition logic
-struct ChordTransposer {
-    static let totalNotes = 12
-    static let noteNamesSharp = ["C", "C#", "D", "D#", "E", "F", "F#", "G", "G#", "A", "A#", "B"]
-    static let noteNamesFlat = ["C", "Db", "D", "Eb", "E", "F", "Gb", "G", "Ab", "A", "Bb", "B"]
-    
-    static func transpose(chord: String, toKey targetKey: MusicalKey) -> String {
-        let chordsArray = chord.split(separator: "-").map { $0.trimmingCharacters(in: .whitespaces) }
-        
-        let targetKeyPosition = noteNamesSharp.firstIndex(of: targetKey.rawValue) ?? noteNamesFlat.firstIndex(of: targetKey.rawValue) ?? 0
-        
-        let transposedChords = chordsArray.compactMap { chord -> String? in
-            var isMinor = false
-            var chordRoot = chord
-            if chord.hasSuffix("m") {
-                isMinor = true
-                chordRoot = String(chord.dropLast())
-            }
-            
-            guard let chordPosition = noteNamesSharp.firstIndex(of: chordRoot) ?? noteNamesFlat.firstIndex(of: chordRoot) else { return nil }
-            
-            let transpositionInterval = targetKeyPosition - chordPosition
-            let transposedPosition = (chordPosition + transpositionInterval + totalNotes) % totalNotes
-            let transposedChordRoot = noteNamesSharp[transposedPosition]
-            
-            return transposedChordRoot + (isMinor ? "m" : "")
-        }.joined(separator: " - ")
-        
-        return transposedChords
-    }
-}
-
 // SwiftUI View
 struct MedleyDetail: View {
     @ObservedObject var medley: Medley
@@ -112,7 +80,14 @@ struct MedleyDetail: View {
     
     private func transposeChords() {
         for index in medley.songs.indices {
-            medley.songs[index].chords = ChordTransposer.transpose(chord: medley.songs[index].chords, toKey: MusicalKey(rawValue: transposeKey) ?? .C)
+            let originalChords = medley.songs[index].chords
+            let originalKey = medley.songs[index].key
+            
+            if let transposedChords = transpose(chords: originalChords, fromKey: originalKey, toKey: transposeKey) {
+                medley.songs[index].chords = transposedChords
+            } else {
+                print("Could not transpose chords for song: \(medley.songs[index].title)")
+            }
         }
         isTransposed = true
     }
