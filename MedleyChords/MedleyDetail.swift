@@ -12,25 +12,18 @@ enum MusicalKey: String, CaseIterable {
 // SwiftUI View
 struct MedleyDetail: View {
     @ObservedObject var medley: Medley
-    let isEditing: Bool
-    @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
-    @State private var path: [Int] = []
-    @State private var transposeKey: String = "C"
-    @State private var isTransposed: Bool = false
+     let isEditing: Bool
+     @State private var isAddingSong: Bool = false  // <-- New state variable
+     @State private var transposeKey: String = "C"
+     @State private var isTransposed: Bool = false
     
     var body: some View {
-            NavigationStack(path: $path) {
                 List {
                     titleSection
                     songsSection
                     addSongButton
                     transposeButton
                 }
-                .navigationTitle(medley.title)
-                .navigationDestination(for: Int.self) { _ in
-                    AddSongView(song: .constant(Song(title: "", chords: "", key: "")))
-                }
-            }
         }
     
     private var titleSection: some View {
@@ -61,16 +54,24 @@ struct MedleyDetail: View {
     }
     
     private var addSongButton: some View {
-        Button {
-            path.append(1)
-        } label: {
+        Button(action: {
+            isAddingSong = true  // Set isAddingSong to true when the button is tapped
+        }) {
             HStack {
                 Image(systemName: "plus")
+                    .foregroundColor(.blue)
                 Text("Add Song")
+                    .foregroundColor(.blue)
             }
         }
-        .buttonStyle(.borderless)
+        .buttonStyle(PlainButtonStyle())
+        .background(
+            NavigationLink("", destination: AddSongView(song: .constant(Song(title: "", chords: "", key: ""))), isActive: $isAddingSong)
+                .opacity(0)  // This makes the NavigationLink invisible
+        )
     }
+
+
     
     private var transposeButton: some View {
         Button(action: transposeChords) {
