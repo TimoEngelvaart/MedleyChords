@@ -31,10 +31,7 @@ struct MedleyList: View {
     }
 }
 
-struct MedleyList_Previews: PreviewProvider {
-    static var previews: some View {
-        NavigationView {
-            MedleyList().environmentObject(MedleyData())
-        }
-    }
+#Preview {
+    MedleyList().environmentObject(MedleyData())
 }
+    

@@ -76,9 +76,8 @@ struct MedleyEditor: View {
     }
 }
 
-struct MedleyEditor_Previews: PreviewProvider {
-    static var previews: some View {
-        MedleyEditor(medley: .constant(Medley(title: "String", songs: [Song(title: "", chords: "", key: "String")])))
-            .environmentObject(MedleyData()) // Add this line to provide EventData
-    }
+#Preview {
+    MedleyEditor(medley: .constant(Medley(title: "String", songs: [Song(title: "", chords: "", key: "String")])))
+        .environmentObject(MedleyData()) // Add this line to provide EventData
 }
+
