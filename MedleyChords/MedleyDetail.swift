@@ -1,14 +1,5 @@
 import SwiftUI
 
-// Enum for musical keys
-enum MusicalKey: String, CaseIterable {
-    case C, Cs, D, Ds, E, F, Fs, G, Gs, A, As, B
-    
-    var position: Int {
-        return MusicalKey.allCases.firstIndex(of: self)!
-    }
-}
-
 // SwiftUI View
 struct MedleyDetail: View {
     @ObservedObject var medley: Medley
@@ -29,7 +20,7 @@ struct MedleyDetail: View {
     private var titleSection: some View {
         HStack {
             if isEditing {
-                TextField("New Event", text: $medley.title)
+                TextField("Medley name", text: $medley.title)
                     .font(.title2)
             } else {
                 Text("Songs")
@@ -40,12 +31,12 @@ struct MedleyDetail: View {
     }
     
     private var songsSection: some View {
-        ForEach(medley.songs.indices, id: \.self) { index in
+        ForEach(medley.songs) { medley in
             VStack(alignment: .leading) {
-                Text(medley.songs[index].title)
+                Text(medley.title)
                     .font(.headline)
-                Text("Chords: \(medley.songs[index].chords)")
-                Text("Original Key: \(medley.songs[index].key)")
+                Text("Chords: \(medley.chords)")
+                Text("Original Key: \(medley.key)")
                 if isTransposed {
                     Text("Transposed to Key of \(transposeKey)")
                 }
