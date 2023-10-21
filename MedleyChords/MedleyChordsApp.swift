@@ -8,17 +8,10 @@
 import SwiftUI
 
 @main
-struct MedleyChordsApp: App {
-    @StateObject private var medleyData = MedleyData()
-
+struct TempMedleyChordsApp: App {
     var body: some Scene {
         WindowGroup {
-            NavigationView {
-                MedleyList()
-                Text("Select a medley")
-                    .foregroundStyle(.secondary)
-            }
-            .environmentObject(medleyData)
+            ContentView()
         }
     }
 }

@@ -8,29 +8,27 @@
 
 /* Begin PBXBuildFile section */
 		401CA9852AD9B2C60010155C /* ChordUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 401CA9842AD9B2C60010155C /* ChordUtils.swift */; };
+		40231BC72AE3E7F10067507E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40231BC62AE3E7F10067507E /* ContentView.swift */; };
 		40C7C8D92AD0155700906B5D /* MedleyChordsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40C7C8D82AD0155700906B5D /* MedleyChordsApp.swift */; };
 		40C7C8DD2AD0155800906B5D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 40C7C8DC2AD0155800906B5D /* Assets.xcassets */; };
 		40C7C8E02AD0155800906B5D /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 40C7C8DF2AD0155800906B5D /* Preview Assets.xcassets */; };
 		40C7C8E92AD01A9600906B5D /* Medley.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40C7C8E82AD01A9600906B5D /* Medley.swift */; };
-		40C7C8EB2AD01ACA00906B5D /* MedleyData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40C7C8EA2AD01ACA00906B5D /* MedleyData.swift */; };
 		40C7C8ED2AD01AED00906B5D /* MedleyDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40C7C8EC2AD01AED00906B5D /* MedleyDetail.swift */; };
-		40C7C8EF2AD01B0400906B5D /* MedleyEditor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40C7C8EE2AD01B0400906B5D /* MedleyEditor.swift */; };
-		40C7C8F12AD01B6700906B5D /* MedleyList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40C7C8F02AD01B6700906B5D /* MedleyList.swift */; };
+		40C7C8F12AD01B6700906B5D /* MedleysView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40C7C8F02AD01B6700906B5D /* MedleysView.swift */; };
 		40C7C8F32AD01B9100906B5D /* MedleyRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40C7C8F22AD01B9100906B5D /* MedleyRow.swift */; };
 		40CB5D292AD48224005A71E4 /* addSongView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40CB5D282AD48224005A71E4 /* addSongView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		401CA9842AD9B2C60010155C /* ChordUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChordUtils.swift; sourceTree = "<group>"; };
+		40231BC62AE3E7F10067507E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		40C7C8D52AD0155700906B5D /* MedleyChords.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MedleyChords.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		40C7C8D82AD0155700906B5D /* MedleyChordsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedleyChordsApp.swift; sourceTree = "<group>"; };
 		40C7C8DC2AD0155800906B5D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		40C7C8DF2AD0155800906B5D /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		40C7C8E82AD01A9600906B5D /* Medley.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Medley.swift; sourceTree = "<group>"; };
-		40C7C8EA2AD01ACA00906B5D /* MedleyData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedleyData.swift; sourceTree = "<group>"; };
 		40C7C8EC2AD01AED00906B5D /* MedleyDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedleyDetail.swift; sourceTree = "<group>"; };
-		40C7C8EE2AD01B0400906B5D /* MedleyEditor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedleyEditor.swift; sourceTree = "<group>"; };
-		40C7C8F02AD01B6700906B5D /* MedleyList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedleyList.swift; sourceTree = "<group>"; };
+		40C7C8F02AD01B6700906B5D /* MedleysView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedleysView.swift; sourceTree = "<group>"; };
 		40C7C8F22AD01B9100906B5D /* MedleyRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedleyRow.swift; sourceTree = "<group>"; };
 		40CB5D282AD48224005A71E4 /* addSongView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = addSongView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -46,6 +44,34 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		40231BC42AE3E76A0067507E /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				401CA9842AD9B2C60010155C /* ChordUtils.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		40231BC52AE3E7AF0067507E /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				40C7C8E82AD01A9600906B5D /* Medley.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		40231BC82AE3E8050067507E /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				40231BC62AE3E7F10067507E /* ContentView.swift */,
+				40CB5D282AD48224005A71E4 /* addSongView.swift */,
+				40C7C8EC2AD01AED00906B5D /* MedleyDetail.swift */,
+				40C7C8F22AD01B9100906B5D /* MedleyRow.swift */,
+				40C7C8F02AD01B6700906B5D /* MedleysView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		40C7C8CC2AD0155700906B5D = {
 			isa = PBXGroup;
 			children = (
@@ -65,15 +91,10 @@
 		40C7C8D72AD0155700906B5D /* MedleyChords */ = {
 			isa = PBXGroup;
 			children = (
-				401CA9842AD9B2C60010155C /* ChordUtils.swift */,
 				40C7C8D82AD0155700906B5D /* MedleyChordsApp.swift */,
-				40C7C8E82AD01A9600906B5D /* Medley.swift */,
-				40C7C8EA2AD01ACA00906B5D /* MedleyData.swift */,
-				40C7C8EC2AD01AED00906B5D /* MedleyDetail.swift */,
-				40C7C8EE2AD01B0400906B5D /* MedleyEditor.swift */,
-				40C7C8F02AD01B6700906B5D /* MedleyList.swift */,
-				40C7C8F22AD01B9100906B5D /* MedleyRow.swift */,
-				40CB5D282AD48224005A71E4 /* addSongView.swift */,
+				40231BC42AE3E76A0067507E /* Utilities */,
+				40231BC52AE3E7AF0067507E /* Models */,
+				40231BC82AE3E8050067507E /* Views */,
 				40C7C8DC2AD0155800906B5D /* Assets.xcassets */,
 				40C7C8DE2AD0155800906B5D /* Preview Content */,
 			);
@@ -159,12 +180,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				40CB5D292AD48224005A71E4 /* addSongView.swift in Sources */,
-				40C7C8F12AD01B6700906B5D /* MedleyList.swift in Sources */,
+				40C7C8F12AD01B6700906B5D /* MedleysView.swift in Sources */,
 				40C7C8E92AD01A9600906B5D /* Medley.swift in Sources */,
 				401CA9852AD9B2C60010155C /* ChordUtils.swift in Sources */,
-				40C7C8EF2AD01B0400906B5D /* MedleyEditor.swift in Sources */,
+				40231BC72AE3E7F10067507E /* ContentView.swift in Sources */,
 				40C7C8F32AD01B9100906B5D /* MedleyRow.swift in Sources */,
-				40C7C8EB2AD01ACA00906B5D /* MedleyData.swift in Sources */,
 				40C7C8D92AD0155700906B5D /* MedleyChordsApp.swift in Sources */,
 				40C7C8ED2AD01AED00906B5D /* MedleyDetail.swift in Sources */,
 			);
