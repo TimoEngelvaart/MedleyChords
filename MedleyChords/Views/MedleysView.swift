@@ -1,9 +1,8 @@
 import SwiftUI
 
 struct MedleysView: View {
-    //medleys is your reference to the Medley Model
-    //So you're basically saying that medleys is an array of Medleymodels
-    let medleys: [Medley]
+    // Make the array mutable with @State
+    @State private var medleys: [Medley] = Medley.sampleData
     
     var body: some View {
         NavigationStack {
@@ -11,19 +10,28 @@ struct MedleysView: View {
                 NavigationLink(destination: MedleyDetail(medley: medley)) {
                     MedleyRow(medley: medley)
                 }
+                .swipeActions {
+                    Button(role: .destructive) {
+                        if let index = medleys.firstIndex(where: { $0.id == medley.id }) {
+                            medleys.remove(at: index)
+                        }
+                    } label: {
+                        Label("Delete", systemImage: "trash")
+                    }
+                }
             }
             .navigationTitle("Medleys")
             .toolbar {
-                Button(action: {}) {
-                    Image(systemName: "plus")
-                }
-                .accessibilityLabel("New medley")
-            }
+                NavigationLink(destination: AddMedleyView(medleys: $medleys)) {
+                       Image(systemName: "plus")
+                   }
+                   .accessibilityLabel("New medley")
+               }
         }
     }
 }
 
+// The preview part remains unchanged
 #Preview {
-    //Needs a Medley array to compile, look at the Medley array declaration above.
-    MedleysView(medleys: Medley.sampleData)
+    MedleysView()
 }

@@ -9,7 +9,7 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        MedleysView(medleys: Medley.sampleData)
+        MedleysView()
     }
 }
 
